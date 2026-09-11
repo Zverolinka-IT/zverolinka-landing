@@ -1,0 +1,99 @@
+{
+  "Metadata": {
+    "title": "Zverolinka - Sprievodca pri záchrane zvierat",
+    "description": "Zverolinka vám pomôže vyhodnotiť situáciu a ukáže, čo robiť a koho kontaktovať, keď je zviera v núdzi.",
+    "ogLocale": "sk_SK"
+  },
+  "Header": {
+    "home": "{name} – domov",
+    "nav": {
+      "about": "O nás",
+      "howItWorks": "Ako to funguje",
+      "support": "Podporte nás"
+    },
+    "contact": "Kontaktujte nás",
+    "menu": "Menu"
+  },
+  "Hero": {
+    "title": "<accent>Zverolinka -</accent> Sprievodca pri <br></br>záchrane zvierat",
+    "lead": "Zverolinka vám pomôže vyhodnotiť situáciu a ukáže, čo robiť a koho kontaktovať, keď je zviera v núdzi.",
+    "imageAlt": "Obrazovky aplikácie Zverolinka",
+    "countdownTitle": "Pomoc zvieratám v núdzi už čoskoro",
+    "countdownUnit": "{count, plural, one {deň} few {dni} other {dní}}"
+  },
+  "Signup": {
+    "title": "Buďte medzi prvými, ktorí sa dozvedia o spustení a získajte praktické tipy ako pomáhať zvieratám.",
+    "emailLabel": "E-mail",
+    "placeholder": "email@email.sk",
+    "submit": "Chcem byť pri tom",
+    "pending": "Odosielam…",
+    "consent": "Prihlásením súhlasíte so zasielaním noviniek Zverolinky na uvedený e-mail. Odber môžete kedykoľvek zrušiť. Viac informácií nájdete v <link>Zásadách ochrany osobných údajov.</link>",
+    "invalid": "Zadajte platnú e-mailovú adresu.",
+    "success": "Ďakujeme! Dáme vám vedieť, keď Zverolinku spustíme."
+  },
+  "Benefits": {
+    "title": "Ako vám Zverolinka uľahčí pomoc zvieraťu?",
+    "imageAlt": "Ruka drží telefón s aplikáciou Zverolinka, ktorá hľadá polohu zvieraťa na mape",
+    "items": {
+      "onePlace": {
+        "title": "Jedno miesto pre rôzne prípady pomoci",
+        "body": "Poradí vám pri zranených zvieratách, týraní, zanedbávaní či náleze uhynutého zvieraťa."
+      },
+      "stepByStep": {
+        "title": "Postup podľa konkrétneho prípadu",
+        "body": "Podľa druhu zvieraťa, vašej polohy a odpovedí vám ukáže, čo robiť krok za krokom."
+      },
+      "contacts": {
+        "title": "Kontakty v odporúčanom poradí",
+        "body": "Zistíte, na koho sa obrátiť najskôr a ako pokračovať, ak prvá možnosť nevyjde."
+      }
+    }
+  },
+  "Steps": {
+    "title": "Ako to funguje?",
+    "items": {
+      "situation": {
+        "title": "Vyberte situáciu",
+        "body": "Označte, či ide o týranie zvierat, zranené, stratené zviera alebo iný prípad zvieraťa v núdzi."
+      },
+      "questions": {
+        "title": "Odpovedzte na pár otázok",
+        "body": "Povedzte nám, čo sa stalo, o aké zviera ide a kde sa nachádza."
+      },
+      "contact": {
+        "title": "Získajte správny kontakt",
+        "body": "Nasmerujeme vás na odborníkov, organizáciu na ochranu zvierat, záchrannú stanicu pre zvieratá alebo iné."
+      },
+      "whatToDo": {
+        "title": "Zistite, čo robiť",
+        "body": "Dostanete odporúčania, ako zvieratu pomôžete sami, ako na odchyt zvierat a čomu sa vyhnúť."
+      }
+    }
+  },
+  "About": {
+    "title": "O Zverolinke",
+    "body": "Zverolinka je mobilný sprievodca, ktorý vás krok za krokom prevedie pomocou zraneným, strateným a nájdeným či iným zvieratám. Spája ľudí, odborníkov a pomoc na jednom mieste.",
+    "team": "Kto stojí za Zverolinkou",
+    "imageAlt": "Ľudia sediaci vedľa seba na bielej kocke"
+  },
+  "Support": {
+    "title": "Staňte sa hrdinom pre zvieratá",
+    "body": "Nie každý hrdina zachraňuje zvieratá vlastnými rukami. Podporte Zverolinku a staňte sa hrdinom pre zvieratá v núdzi.",
+    "cta": "Prispejem na pomoc zvieratám"
+  },
+  "Follow": {
+    "title": "Sledujte nás",
+    "body": "Buďte pri tom a sledujte novinky zo zákulisia"
+  },
+  "Footer": {
+    "about": "Zverolinka pomáha nájsť zraneným a ohrozeným zvieratám včasnú pomoc.",
+    "followTitle": "Sledujte nás",
+    "contactTitle": "Kontakt",
+    "contact": "Máte otázky alebo chcete spolupracovať? <br></br>Napíšte nám na <mail>{email}</mail>",
+    "rights": "© {year} {name}. Všetky práva vyhradené.",
+    "legal": {
+      "privacy": "Ochrana osobných údajov",
+      "terms": "Podmienky používania"
+    }
+  }
+}

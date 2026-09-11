@@ -1,0 +1,7 @@
+package-lock.json
+skills-lock.json
+.agents/
+.claude/
+# Written by `next dev`.
+AGENTS.md
+CLAUDE.md

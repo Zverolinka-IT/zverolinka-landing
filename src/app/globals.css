@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f6fe;
+  --surface: #ffffff;
+  --foreground: #000000;
+  --muted: #5d5f73;
+  --border: #ecedf5;
+  --brand: #444dcd;
+  --brand-light: #5a61d6;
+  --brand-soft: #dadbf5;
+  --accent: #f56d42;
+  --accent-light: #f88862;
+  --accent-soft: #fff6f3;
+  --accent-border: #f9b19a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-light: var(--brand-light);
+  --color-brand-soft: var(--brand-soft);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-border: var(--accent-border);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@layer base {
+  /* The Figma design sets all text 3% tighter than the font default.
+     Set per element so the em unit follows each element's own font size;
+     tracking-* utilities still override it. */
+  * {
+    letter-spacing: -0.03em;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Stops anchored sections below the sticky header (h-20 plus its 1px
+     border), in the middle of main's gap-4 between sections. */
+  scroll-padding-top: calc(5rem + 1px + 0.5rem);
+}
+
+@media (width >= 48rem) {
+  html {
+    /* main's gap grows to md:gap-10. */
+    scroll-padding-top: calc(5rem + 1px + 1.25rem);
+  }
+}
+
+@media (width >= 64rem) {
+  html {
+    /* The header grows to lg:h-25. */
+    scroll-padding-top: calc(6.25rem + 1px + 1.25rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

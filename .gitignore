@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ai tools (AGENTS.md and CLAUDE.md stay tracked: they hold the project rules)
+/.agents/
+/.claude/
+/skills-lock.json
