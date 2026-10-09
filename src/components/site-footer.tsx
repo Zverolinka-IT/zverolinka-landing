@@ -8,23 +8,18 @@ export function SiteFooter() {
 
   return (
     <footer id="kontakt" className="mt-auto border-t border-border bg-surface">
-      <div className="mx-auto w-full max-w-360 px-5 pt-6 pb-6 sm:px-10 md:pt-5">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,513fr)_minmax(0,358fr)_minmax(0,487fr)] lg:gap-0">
-          {/* The mobile design shows only the contact column; the social
-              links are already in the card above the footer. */}
-          <div className="max-md:hidden">
+      <div className="mx-auto w-full max-w-360 px-5 pt-6 pb-6 sm:px-10">
+        {/* Mobile shows contact first, then the social links. From md the
+            order is logo, social links, contact, as the design has it. */}
+        <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_338px_minmax(0,1fr)] md:gap-12">
+          <div className="max-md:hidden md:order-1">
             <Logo />
-            <p className="mt-3.5 max-w-md text-lg leading-7 text-pretty sm:text-xl">{t("about")}</p>
+            <p className="mt-4 max-w-md text-pretty lg:pr-20">{t("about")}</p>
           </div>
 
-          <div className="max-md:hidden lg:pt-0.5">
-            <h2 className="text-xl leading-7 font-semibold">{t("followTitle")}</h2>
-            <SocialLinks tone="outline" className="mt-7" />
-          </div>
-
-          <div className="lg:pt-0.5">
-            <h2 className="text-base leading-6 font-semibold sm:text-xl sm:leading-7">{t("contactTitle")}</h2>
-            <p className="mt-1 text-[15px] leading-6 sm:text-xl sm:leading-7">
+          <div className="md:order-3">
+            <h2 className="text-base leading-6 font-semibold sm:text-lg sm:leading-7">{t("contactTitle")}</h2>
+            <p className="mt-2 text-[15px] leading-6">
               {t.rich("contact", {
                 email: site.email,
                 br: () => <br className="max-md:hidden" />,
@@ -36,22 +31,23 @@ export function SiteFooter() {
               })}
             </p>
           </div>
+
+          <div className="md:order-2">
+            <h2 className="text-lg leading-7 font-semibold max-md:hidden">{t("followTitle")}</h2>
+            <SocialLinks className="justify-center md:mt-6 md:justify-start" />
+          </div>
         </div>
 
         <div
           className="
-            mt-6 grid grid-cols-2 gap-x-4 gap-y-4 border-t border-border pt-4 text-xs leading-4 text-brand
-            sm:grid-cols-3 sm:gap-y-2
-            md:mt-5
+            mt-5 flex flex-col items-center gap-3 border-t border-brand-soft pt-4 text-xs leading-4 text-brand
+            sm:flex-row sm:justify-center sm:gap-4
           "
         >
-          <p className="col-span-2 sm:col-span-1">{t("rights", { year: new Date().getFullYear(), name: site.name })}</p>
+          <p>{t("rights", { year: new Date().getFullYear(), name: site.name })}</p>
+          <span aria-hidden className="h-4 w-px bg-brand max-sm:hidden" />
           {site.legal.map((link) => (
-            <a
-              key={link.key}
-              href={link.href}
-              className="w-fit font-medium underline underline-offset-2 last:justify-self-end sm:last:justify-self-auto"
-            >
+            <a key={link.key} href={link.href} className="font-semibold underline underline-offset-2">
               {t(`legal.${link.key}`)}
             </a>
           ))}

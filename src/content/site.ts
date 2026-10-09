@@ -3,28 +3,21 @@
 export const site = {
   name: "Zverolinka",
   email: "info@zverolinka.sk",
-  // The hero countdown counts the days until this moment.
-  launchDate: "2026-11-12T00:00:00+01:00",
 
   nav: [
-    { key: "about", href: "#o-nas" },
-    { key: "howItWorks", href: "#ako-to-funguje" },
-    { key: "support", href: "#podporte-nas" },
+    { key: "about", href: "/#o-zverolinke" },
+    { key: "howItWorks", href: "/#ako-to-funguje" },
+    { key: "support", href: "/#podporte-nas" },
   ],
-  contactHref: "#kontakt",
+  contactHref: "/kontakt",
   privacyHref: "#",
-  donateHref: "#",
-  teamHref: "#",
+  donateHref: "https://alianciazdruzeninaochranuzvierat.darujme.sk/zverolinka-sprievodca-pre-zachranu-zvierat/",
 
   social: [
-    { name: "Facebook", href: "#" },
-    { name: "Instagram", href: "#" },
-    { name: "LinkedIn", href: "#" },
-    { name: "TikTok", href: "#" },
+    { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61594397074434" },
+    { name: "Instagram", href: "https://www.instagram.com/zverolinka/" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/zverolinka" },
   ],
 
-  legal: [
-    { key: "privacy", href: "#" },
-    { key: "terms", href: "#" },
-  ],
+  legal: [{ key: "privacy", href: "#" }],
 } as const;

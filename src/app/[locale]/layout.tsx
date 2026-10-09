@@ -33,7 +33,9 @@ export default async function RootLayout({ children }: LayoutProps<"/[locale]">)
   const locale = await getLocale();
 
   return (
-    <html lang={locale} className={`${inter.variable} h-full antialiased`}>
+    // data-scroll-behavior lets Next.js turn off smooth scrolling while it
+    // opens another page, so the new page starts at the top at once.
+    <html lang={locale} data-scroll-behavior="smooth" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

@@ -3,57 +3,74 @@
 import { useActionState, type ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import { subscribe, type SubscribeState } from "@/app/actions";
+import { SubmitButton } from "@/components/submit-button";
+import { useFormToken } from "@/components/use-form-token";
 
 const initialState: SubscribeState = { status: "idle" };
 
 export function SignupForm({ consent }: { consent: ReactNode }) {
   const t = useTranslations("Signup");
-  const [state, formAction, pending] = useActionState(subscribe, initialState);
+  const guarded = useFormToken("signup", subscribe);
+  const [state, formAction, pending] = useActionState(guarded.action, initialState);
+  // There is only one field, so both problems show under it.
+  const failed = state.status === "invalid" || state.status === "error";
 
   return (
-    <form action={formAction} className="mt-4">
-      {/* One column: field, consent, button. From sm the field and the
-          button share the first row and the consent moves under them. */}
-      <div className="grid gap-4 sm:grid-cols-2 sm:items-center">
+    <form action={formAction} onFocus={guarded.onFocus} noValidate className="@container mt-4">
+      {/* One column: field, consent, button. The switch to two columns follows
+          the card's own width, not the screen. The card needs 32rem before the
+          field and the button share a row, or the field gets too narrow. */}
+      <div className="grid gap-4 @lg:grid-cols-[minmax(0,1fr)_auto] @lg:items-start">
         <label htmlFor="signup-email" className="sr-only">
           {t("emailLabel")}
         </label>
+        {/* The field is 0.25rem lower, so its middle lines up with the taller
+            button while an error message hangs below it. */}
+        <div className="@lg:mt-1">
+          <input
+            id="signup-email"
+            type="email"
+            name="email"
+            required
+            autoComplete="email"
+            defaultValue={state.email}
+            placeholder={t("placeholder")}
+            aria-invalid={failed || undefined}
+            aria-describedby={failed ? "signup-email-error" : undefined}
+            className="
+              h-11 w-full rounded-xl border border-brand/60 bg-surface px-3 text-base
+              placeholder:text-muted/70
+              focus:outline-2 focus:outline-offset-1 focus:outline-brand
+              aria-invalid:border-accent
+              @lg:text-sm
+            "
+          />
+          <p
+            id="signup-email-error"
+            aria-live="polite"
+            className="mt-1 px-1 text-xs leading-4 font-medium text-accent empty:hidden"
+          >
+            {(state.status === "invalid" || state.status === "error") && t(state.status)}
+          </p>
+        </div>
+        {/* A trap for spam bots. It is off screen and skipped by keyboard and
+            screen readers, so only bots fill it in. */}
         <input
-          id="signup-email"
-          type="email"
-          name="email"
-          required
-          autoComplete="email"
-          placeholder={t("placeholder")}
-          className="
-            h-11 rounded-xl border border-brand/60 bg-surface px-3 text-base
-            placeholder:text-muted/70
-            focus:outline-2 focus:outline-offset-1 focus:outline-brand
-            sm:text-sm
-          "
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="absolute -left-[9999px] size-px opacity-0"
         />
-        <p className="text-sm leading-[1.4] sm:col-span-2 sm:row-start-2">{consent}</p>
-        <button
-          type="submit"
-          disabled={pending}
-          className="
-            h-13 rounded-xl bg-linear-to-r from-brand-light to-brand px-5 font-medium text-white shadow-md
-            shadow-brand/25 transition-opacity
-            hover:opacity-90
-            disabled:opacity-60
-            sm:col-start-2 sm:row-start-1
-          "
-        >
-          {pending ? t("pending") : t("submit")}
-        </button>
+        <p className="text-sm leading-[1.4] @lg:col-span-2 @lg:row-start-2">{consent}</p>
+        <SubmitButton
+          state={state}
+          pending={pending}
+          label={t("submit")}
+          className="whitespace-nowrap @lg:col-start-2 @lg:row-start-1"
+        />
       </div>
-
-      <p
-        aria-live="polite"
-        className={`mt-3 text-sm font-medium empty:hidden ${state.status === "invalid" ? "text-accent" : "text-brand"}`}
-      >
-        {state.status !== "idle" && t(state.status)}
-      </p>
     </form>
   );
 }

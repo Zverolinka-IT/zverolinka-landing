@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { site } from "@/content/site";
+import { HomeLink } from "@/components/home-link";
 import { Logo } from "@/components/logo";
 import { MobileMenu } from "@/components/mobile-menu";
 
@@ -14,9 +15,9 @@ export function SiteHeader() {
       "
     >
       <div className="mx-auto flex h-20 w-full max-w-360 items-center justify-between gap-6 px-4 sm:px-10 lg:h-25">
-        <a href="#" aria-label={t("home", { name: site.name })}>
+        <HomeLink aria-label={t("home", { name: site.name })}>
           <Logo />
-        </a>
+        </HomeLink>
 
         <div className="hidden items-center gap-10 md:flex">
           <nav className="flex items-center gap-10">

@@ -18,72 +18,96 @@
     "title": "<accent>Zverolinka -</accent> Sprievodca pri <br></br>záchrane zvierat",
     "lead": "Zverolinka vám pomôže vyhodnotiť situáciu a ukáže, čo robiť a koho kontaktovať, keď je zviera v núdzi.",
     "imageAlt": "Obrazovky aplikácie Zverolinka",
-    "countdownTitle": "Pomoc zvieratám v núdzi už čoskoro",
-    "countdownUnit": "{count, plural, one {deň} few {dni} other {dní}}"
+    "launchTitle": "Spúšťame čoskoro"
+  },
+  "Form": {
+    "sent": "Odoslané"
   },
   "Signup": {
-    "title": "Buďte medzi prvými, ktorí sa dozvedia o spustení a získajte praktické tipy ako pomáhať zvieratám.",
+    "title": "Buďte medzi prvými, ktorí sa dozvedia o spustení a získavajte praktické tipy ako pomáhať zvieratám.",
     "emailLabel": "E-mail",
     "placeholder": "email@email.sk",
     "submit": "Chcem byť pri tom",
-    "pending": "Odosielam…",
     "consent": "Prihlásením súhlasíte so zasielaním noviniek Zverolinky na uvedený e-mail. Odber môžete kedykoľvek zrušiť. Viac informácií nájdete v <link>Zásadách ochrany osobných údajov.</link>",
     "invalid": "Zadajte platnú e-mailovú adresu.",
-    "success": "Ďakujeme! Dáme vám vedieť, keď Zverolinku spustíme."
+    "error": "Prihlásenie sa nepodarilo. Skúste to, prosím, znova o chvíľu."
+  },
+  "Contact": {
+    "metaTitle": "Kontaktujte nás | Zverolinka",
+    "title": "Kontaktujte nás",
+    "firstName": "Meno*",
+    "firstNamePlaceholder": "Ján",
+    "lastName": "Priezvisko*",
+    "lastNamePlaceholder": "Novák",
+    "email": "E-mail*",
+    "emailPlaceholder": "email@email.sk",
+    "phone": "Telefónne číslo",
+    "phonePlaceholder": "+421 900 123 456",
+    "consent": "Áno, súhlasím so zasielaním newslettera Zverolinky. Prečítal/a som si <link>Zásady ochrany osobných údajov</link> a beriem ich na vedomie.*",
+    "volunteer": "Mám záujem stať sa dobrovoľníkom/čkou Zverolinky.",
+    "submit": "Chcem tipy od Zverolinky",
+    "errors": {
+      "firstName": "Zadajte meno.",
+      "lastName": "Zadajte priezvisko.",
+      "email": "Zadajte platnú e-mailovú adresu.",
+      "phone": "Zadajte platné telefónne číslo.",
+      "consent": "Na odoslanie potrebujeme váš súhlas."
+    },
+    "error": "Odoslanie sa nepodarilo. Skúste to, prosím, znova o chvíľu."
   },
   "Benefits": {
-    "title": "Ako vám Zverolinka uľahčí pomoc zvieraťu?",
+    "title": "Ako Zverolinka uľahčí pomoc zvieraťu?",
     "imageAlt": "Ruka drží telefón s aplikáciou Zverolinka, ktorá hľadá polohu zvieraťa na mape",
     "items": {
       "onePlace": {
         "title": "Jedno miesto pre rôzne prípady pomoci",
-        "body": "Poradí vám pri zranených zvieratách, týraní, zanedbávaní či náleze uhynutého zvieraťa."
+        "body": "Poradí vám pri zranených a zatúlaných zvieratách, týraní či náleze uhynutého zvieraťa."
       },
       "stepByStep": {
         "title": "Postup podľa konkrétneho prípadu",
         "body": "Podľa druhu zvieraťa, vašej polohy a odpovedí vám ukáže, čo robiť krok za krokom."
       },
       "contacts": {
-        "title": "Kontakty v odporúčanom poradí",
+        "title": "Pri zranenom či zatúlanom zvierati",
         "body": "Zistíte, na koho sa obrátiť najskôr a ako pokračovať, ak prvá možnosť nevyjde."
+      },
+      "abuse": {
+        "title": "Pri týraní či zanedbávaní pomôžeme priamo my",
+        "body": "Prípad preveríme alebo postúpime príslušnému orgánu a ďalej ho sledujeme a vyhodnocujeme."
       }
     }
   },
-  "Steps": {
-    "title": "Ako to funguje?",
+  "Report": {
+    "title": "Keď máte podozrenie na týranie alebo zanedbávanie",
+    "lead": "Nemusíte vedieť, ktorý orgán je príslušný ani ako má podanie vyzerať. Cez Zverolinku nám oznámite, čo sa deje, a ďalší postup zabezpečíme.",
     "items": {
-      "situation": {
-        "title": "Vyberte situáciu",
-        "body": "Označte, či ide o týranie zvierat, zranené, stratené zviera alebo iný prípad zvieraťa v núdzi."
+      "check": {
+        "title": "Preveríme alebo zabezpečíme pomoc",
+        "body": "Pri niektorých prípadoch sa najskôr pokúsime zabezpečiť preverenie a pomoc cez spolupracujúcu organizáciu alebo dobrovoľníkov (napr. SOS linku)."
       },
-      "questions": {
-        "title": "Odpovedzte na pár otázok",
-        "body": "Povedzte nám, čo sa stalo, o aké zviera ide a kde sa nachádza."
+      "forward": {
+        "title": "Postúpime príslušnému orgánu",
+        "body": "Ak nie je možné situáciu vyriešiť v spolupráci s organizáciou alebo pri iných prípadoch, postúpime prípad príslušnému orgánu, ktorý ho rieši."
       },
-      "contact": {
-        "title": "Získajte správny kontakt",
-        "body": "Nasmerujeme vás na odborníkov, organizáciu na ochranu zvierat, záchrannú stanicu pre zvieratá alebo iné."
-      },
-      "whatToDo": {
-        "title": "Zistite, čo robiť",
-        "body": "Dostanete odporúčania, ako zvieratu pomôžete sami, ako na odchyt zvierat a čomu sa vyhnúť."
+      "followUp": {
+        "title": "Sledujeme a vyhodnocujeme výsledky",
+        "body": "Prípad pre nás nekončí jeho odoslaním. Sledujeme, ako príslušné orgány postupovali, aký bol výsledok a získané poznatky využívame na zlepšovanie systému ochrany zvierat."
       }
+    },
+    "note": {
+      "title": "Keď je potrebné právne riešenie",
+      "body": "Prípad pre nás nekončí jeho odoslaním. Sledujeme, ako príslušné orgány postupovali, aký bol výsledok a získané poznatky využívame na zlepšovanie systému ochrany zvierat."
     }
   },
   "About": {
     "title": "O Zverolinke",
     "body": "Zverolinka je mobilný sprievodca, ktorý vás krok za krokom prevedie pomocou zraneným, strateným a nájdeným či iným zvieratám. Spája ľudí, odborníkov a pomoc na jednom mieste.",
-    "team": "Kto stojí za Zverolinkou",
     "imageAlt": "Ľudia sediaci vedľa seba na bielej kocke"
   },
   "Support": {
     "title": "Staňte sa hrdinom pre zvieratá",
     "body": "Nie každý hrdina zachraňuje zvieratá vlastnými rukami. Podporte Zverolinku a staňte sa hrdinom pre zvieratá v núdzi.",
     "cta": "Prispejem na pomoc zvieratám"
-  },
-  "Follow": {
-    "title": "Sledujte nás",
-    "body": "Buďte pri tom a sledujte novinky zo zákulisia"
   },
   "Footer": {
     "about": "Zverolinka pomáha nájsť zraneným a ohrozeným zvieratám včasnú pomoc.",
@@ -92,8 +116,7 @@
     "contact": "Máte otázky alebo chcete spolupracovať? <br></br>Napíšte nám na <mail>{email}</mail>",
     "rights": "© {year} {name}. Všetky práva vyhradené.",
     "legal": {
-      "privacy": "Ochrana osobných údajov",
-      "terms": "Podmienky používania"
+      "privacy": "Ochrana osobných údajov"
     }
   }
 }
