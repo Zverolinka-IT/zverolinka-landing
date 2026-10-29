@@ -13,6 +13,8 @@ export const site = {
     { key: "contact", href: "/#kontakt" },
   ],
   newsletterHref: "/newsletter",
+  // While false, the newsletter submit button does nothing.
+  newsletterOpen: false,
   privacyHref,
   donateHref: "https://alianciazdruzeninaochranuzvierat.darujme.sk/zverolinka-sprievodca-pre-zachranu-zvierat/",
 

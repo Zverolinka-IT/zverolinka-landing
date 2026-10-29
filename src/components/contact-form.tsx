@@ -3,6 +3,7 @@
 import { useActionState, type ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import { contact, type ContactField, type ContactState } from "@/app/actions";
+import { site } from "@/content/site";
 import { CheckIcon } from "@/components/icons";
 import { SubmitButton } from "@/components/submit-button";
 import { useFormToken } from "@/components/use-form-token";
@@ -112,6 +113,8 @@ export function ContactForm({ consent }: { consent: ReactNode }) {
   return (
     <form
       action={formAction}
+      // A cancelled submit event also stops the action.
+      onSubmit={site.newsletterOpen ? undefined : (event) => event.preventDefault()}
       onFocus={guarded.onFocus}
       noValidate
       className="flex w-full flex-1 flex-col md:max-w-191 md:flex-none"
