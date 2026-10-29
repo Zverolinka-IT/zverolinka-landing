@@ -13,6 +13,9 @@ export const site = {
     { key: "contact", href: "/#kontakt" },
   ],
   newsletterHref: "/newsletter",
+  // Production shows only the coming soon page. Previews and local dev show
+  // the whole site. Pages are built ahead, so this is read once at build time.
+  comingSoon: process.env.VERCEL_ENV === "production",
   privacyHref,
   donateHref: "https://alianciazdruzeninaochranuzvierat.darujme.sk/zverolinka-sprievodca-pre-zachranu-zvierat/",
 
