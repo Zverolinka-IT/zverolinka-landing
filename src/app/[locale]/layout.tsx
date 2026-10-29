@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getTranslations } from "next-intl/server";
+import { ComingSoon } from "@/components/coming-soon";
+import { site } from "@/content/site";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -37,7 +39,7 @@ export default async function RootLayout({ children }: LayoutProps<"/[locale]">)
     // opens another page, so the new page starts at the top at once.
     <html lang={locale} data-scroll-behavior="smooth" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>{site.comingSoon ? <ComingSoon /> : children}</NextIntlClientProvider>
       </body>
     </html>
   );

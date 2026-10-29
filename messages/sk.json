@@ -194,5 +194,10 @@
     "legal": {
       "privacy": "Ochrana osobných údajov"
     }
+  },
+  "ComingSoon": {
+    "title": "Spúšťame čoskoro",
+    "lead": "Zverolinka pomáha nájsť zraneným a ohrozeným zvieratám včasnú pomoc.",
+    "contact": "Máte otázky alebo chcete spolupracovať? Napíšte nám na <mail>{email}</mail>"
   }
 }
