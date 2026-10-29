@@ -1,5 +1,7 @@
 // Settings that do not change between languages.
 // All visible text lives in messages/<locale>.json.
+const privacyHref = "/ochrana-osobnych-udajov";
+
 export const site = {
   name: "Zverolinka",
   email: "info@zverolinka.sk",
@@ -7,10 +9,11 @@ export const site = {
   nav: [
     { key: "about", href: "/#o-zverolinke" },
     { key: "howItWorks", href: "/#ako-to-funguje" },
-    { key: "support", href: "/#podporte-nas" },
+    // The footer holds the contact details.
+    { key: "contact", href: "/#kontakt" },
   ],
-  contactHref: "/kontakt",
-  privacyHref: "#",
+  newsletterHref: "/newsletter",
+  privacyHref,
   donateHref: "https://alianciazdruzeninaochranuzvierat.darujme.sk/zverolinka-sprievodca-pre-zachranu-zvierat/",
 
   social: [
@@ -19,5 +22,5 @@ export const site = {
     { name: "LinkedIn", href: "https://www.linkedin.com/company/zverolinka" },
   ],
 
-  legal: [{ key: "privacy", href: "#" }],
+  legal: [{ key: "privacy", href: privacyHref }],
 } as const;

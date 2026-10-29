@@ -16,6 +16,8 @@ export function SocialLinks({ className = "" }: { className?: string }) {
           <li key={item.name}>
             <a
               href={item.href}
+              target="_blank"
+              rel="noopener"
               aria-label={item.name}
               className="
                 flex size-8 items-center justify-center rounded-full border-2 border-brand text-brand transition-colors

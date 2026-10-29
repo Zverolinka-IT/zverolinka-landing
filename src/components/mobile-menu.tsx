@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { site } from "@/content/site";
-import { CloseIcon, MenuIcon } from "@/components/icons";
+import { CloseIcon, HeartIcon, MenuIcon } from "@/components/icons";
 
 // The panel is positioned against the sticky header, which is its nearest
 // positioned ancestor, so it opens full width right under the header.
@@ -55,7 +55,7 @@ export function MobileMenu() {
         id="mobile-menu"
         hidden={!open}
         className="
-          absolute inset-x-0 top-full border-b border-border bg-surface px-4 pt-2 pb-6
+          absolute inset-x-0 top-full border-t border-brand-soft bg-surface px-4 pt-2 pb-6
           shadow-[0_8px_16px_rgb(37_42_49/0.06)]
           sm:px-10
         "
@@ -63,7 +63,7 @@ export function MobileMenu() {
         <ul>
           {site.nav.map((item) => (
             <li key={item.key}>
-              <a href={item.href} onClick={close} className="block py-3 font-medium transition-colors hover:text-brand">
+              <a href={item.href} onClick={close} className="block py-3 font-bold transition-colors hover:text-brand">
                 {t(`nav.${item.key}`)}
               </a>
             </li>
@@ -71,15 +71,18 @@ export function MobileMenu() {
         </ul>
 
         <a
-          href={site.contactHref}
+          href={site.donateHref}
+          target="_blank"
+          rel="noopener"
           onClick={close}
           className="
-            mt-3 flex h-13 items-center justify-center rounded-xl border border-brand font-medium text-brand
-            transition-colors
-            hover:bg-brand hover:text-white
+            mt-3 flex h-13 items-center justify-center gap-2 rounded-2xl bg-linear-to-r from-brand via-brand-light
+            via-35% to-brand font-semibold text-white shadow-button transition-opacity
+            hover:opacity-90
           "
         >
-          {t("contact")}
+          <HeartIcon className="size-6 shrink-0" />
+          {t("donate")}
         </a>
       </nav>
     </div>

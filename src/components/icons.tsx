@@ -48,6 +48,19 @@ export function CloseIcon({ className }: IconProps) {
   );
 }
 
+// The exact path from the design's "Ďakujeme full" icon.
+export function HeartIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden className={className}>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M12.7474 5.52012C14.9212 3.35812 18.4288 3.36234 20.5679 5.51865L20.5696 5.52041C21.6191 6.56211 22.2 7.9604 22.2 9.45703C22.2 10.9522 21.6192 12.3505 20.5658 13.3983L13.1074 20.8342L13.106 20.8354C12.7992 21.1451 12.3946 21.3 11.9895 21.3C11.581 21.3 11.1751 21.1441 10.8671 20.8321L3.43184 13.3972C2.38093 12.3518 1.80004 10.9524 1.8 9.45703C1.8 7.96059 2.3808 6.56213 3.43418 5.51426L3.43535 5.51309C5.50217 3.43394 9.15295 3.42822 11.2266 5.51865L11.2289 5.521L11.995 6.27744L12.7474 5.52012Z"
+      />
+    </svg>
+  );
+}
+
 // Two open hands with a heart between the palms, redrawn from the design.
 const handPath =
   "M28 45C21.5 44 16.5 40.5 12.5 36L4 27.5a2.4 2.4 0 0 1 3.5-3.4L13 29.5V10a2 2 0 0 1 4 0v10M17 20V7a2 2 0 0 1 4 0v13M21 20V7.5a2 2 0 0 1 4 0V20M25 20v-9.5a2 2 0 0 1 4 0V33";
@@ -146,6 +159,7 @@ export function CheckIcon({ className }: IconProps) {
     <svg viewBox="0 0 24 24" aria-hidden className={className}>
       <path
         d="M7 11.5L10.5 15.5L17 8"
+        pathLength={1}
         fill="none"
         stroke="currentColor"
         strokeWidth="1.5"

@@ -8,9 +8,8 @@ export function Report() {
 
   return (
     <section id="nahlasenie" className="mx-auto w-full max-w-360 px-4 sm:px-10">
-      <div className="rounded-2xl bg-surface p-6 md:p-12">
-        <h2 className="text-xl font-semibold md:text-[28px] md:leading-9">{t("title")}</h2>
-        <p className="mt-4 text-sm leading-5 text-pretty md:text-lg md:leading-7">{t("lead")}</p>
+      <div className="rounded-2xl border border-brand-soft bg-surface p-6 md:p-12">
+        <h2 className="text-xl font-bold text-balance md:text-[28px] md:leading-9">{t("title")}</h2>
 
         <ol className="mt-6 md:mt-8 md:grid md:grid-cols-3 md:gap-x-3">
           {steps.map((step, index) => (
@@ -42,7 +41,7 @@ export function Report() {
             <InfoIcon className="size-6 shrink-0 text-accent md:size-8" />
             <h3 className="text-sm leading-5 font-semibold text-accent md:text-lg md:leading-7">{t("note.title")}</h3>
           </div>
-          <p className="mt-1 pl-9 text-sm leading-5 text-pretty md:mt-1 md:text-base md:leading-6">{t("note.body")}</p>
+          <p className="mt-1 pl-11 text-sm leading-5 text-pretty md:text-base md:leading-6">{t("note.body")}</p>
         </div>
       </div>
     </section>

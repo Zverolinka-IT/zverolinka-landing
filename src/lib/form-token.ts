@@ -8,7 +8,7 @@ import { createHmac, timingSafeEqual } from "node:crypto";
 export const MIN_FORM_AGE_MS = 2000;
 const MAX_FORM_AGE_MS = 2 * 60 * 60 * 1000;
 
-export type FormName = "signup" | "contact";
+export type FormName = "contact";
 
 function sign(form: FormName, issuedAt: string) {
   const secret = process.env.FORM_SECRET;

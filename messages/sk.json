@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Zverolinka - Sprievodca pri záchrane zvierat",
-    "description": "Zverolinka vám pomôže vyhodnotiť situáciu a ukáže, čo robiť a koho kontaktovať, keď je zviera v núdzi.",
+    "title": "Zverolinka | Sprievodca pri záchrane zvierat",
+    "description": "Zverolinka vám pomôže vyhodnotiť situáciu a ukáže, čo robiť a koho kontaktovať, keď je zviera zranené alebo zatúlané. Pri týranom zvierati prevezmeme prípad za vás.",
     "ogLocale": "sk_SK"
   },
   "Header": {
@@ -9,14 +9,14 @@
     "nav": {
       "about": "O nás",
       "howItWorks": "Ako to funguje",
-      "support": "Podporte nás"
+      "contact": "Kontaktujte nás"
     },
-    "contact": "Kontaktujte nás",
+    "donate": "Darujte",
     "menu": "Menu"
   },
   "Hero": {
-    "title": "<accent>Zverolinka -</accent> Sprievodca pri <br></br>záchrane zvierat",
-    "lead": "Zverolinka vám pomôže vyhodnotiť situáciu a ukáže, čo robiť a koho kontaktovať, keď je zviera v núdzi.",
+    "title": "<accent>Zverolinka |</accent> Sprievodca pri <br></br>záchrane zvierat",
+    "lead": "Zverolinka vám pomôže vyhodnotiť situáciu a ukáže, čo robiť a koho kontaktovať, keď je zviera zranené alebo zatúlané. Pri týranom zvierati prevezmeme prípad za vás.",
     "imageAlt": "Obrazovky aplikácie Zverolinka",
     "launchTitle": "Spúšťame čoskoro"
   },
@@ -25,25 +25,21 @@
   },
   "Signup": {
     "title": "Buďte medzi prvými, ktorí sa dozvedia o spustení a získavajte praktické tipy ako pomáhať zvieratám.",
-    "emailLabel": "E-mail",
-    "placeholder": "email@email.sk",
-    "submit": "Chcem byť pri tom",
-    "consent": "Prihlásením súhlasíte so zasielaním noviniek Zverolinky na uvedený e-mail. Odber môžete kedykoľvek zrušiť. Viac informácií nájdete v <link>Zásadách ochrany osobných údajov.</link>",
-    "invalid": "Zadajte platnú e-mailovú adresu.",
-    "error": "Prihlásenie sa nepodarilo. Skúste to, prosím, znova o chvíľu."
+    "cta": "Chcem byť pri tom"
   },
   "Contact": {
-    "metaTitle": "Kontaktujte nás | Zverolinka",
-    "title": "Kontaktujte nás",
+    "metaTitle": "Newsletter | Zverolinka",
+    "title": "Newsletter Zverolinky",
+    "close": "Zavrieť",
     "firstName": "Meno*",
     "firstNamePlaceholder": "Ján",
-    "lastName": "Priezvisko*",
+    "lastName": "Priezvisko",
     "lastNamePlaceholder": "Novák",
     "email": "E-mail*",
     "emailPlaceholder": "email@email.sk",
     "phone": "Telefónne číslo",
     "phonePlaceholder": "+421 900 123 456",
-    "consent": "Áno, súhlasím so zasielaním newslettera Zverolinky. Prečítal/a som si <link>Zásady ochrany osobných údajov</link> a beriem ich na vedomie.*",
+    "consent": "Áno, súhlasím so zasielaním newslettera Zverolinky a Zvieracieho ombudsmana o ich práci na ochrane zvierat a príležitostne aj o možnostiach darcovstva a podpory ich činnosti. Prečítal/a som si <link>Zásady ochrany osobných údajov</link> a beriem ich na vedomie.*",
     "volunteer": "Mám záujem stať sa dobrovoľníkom/čkou Zverolinky.",
     "submit": "Chcem tipy od Zverolinky",
     "errors": {
@@ -68,8 +64,8 @@
         "body": "Podľa druhu zvieraťa, vašej polohy a odpovedí vám ukáže, čo robiť krok za krokom."
       },
       "contacts": {
-        "title": "Pri zranenom či zatúlanom zvierati",
-        "body": "Zistíte, na koho sa obrátiť najskôr a ako pokračovať, ak prvá možnosť nevyjde."
+        "title": "Pri zranenom a zatúlanom zvierati vám poradí Zverolinka",
+        "body": "Zistíte, na koho sa obrátiť najskôr a ako pokračovať, ak prvá možnosť zlyhá."
       },
       "abuse": {
         "title": "Pri týraní či zanedbávaní pomôžeme priamo my",
@@ -78,36 +74,116 @@
     }
   },
   "Report": {
-    "title": "Keď máte podozrenie na týranie alebo zanedbávanie",
-    "lead": "Nemusíte vedieť, ktorý orgán je príslušný ani ako má podanie vyzerať. Cez Zverolinku nám oznámite, čo sa deje, a ďalší postup zabezpečíme.",
+    "title": "Máte podozrenie na týranie? Nahláste nám ho cez Zverolinku",
     "items": {
       "check": {
-        "title": "Preveríme alebo zabezpečíme pomoc",
-        "body": "Pri niektorých prípadoch sa najskôr pokúsime zabezpečiť preverenie a pomoc cez spolupracujúcu organizáciu alebo dobrovoľníkov (napr. SOS linku)."
+        "title": "Preveríme situáciu",
+        "body": "Prípad preveríme a podľa potreby zapojíme spolupracujúce organizácie alebo dobrovoľníkov."
       },
       "forward": {
-        "title": "Postúpime príslušnému orgánu",
-        "body": "Ak nie je možné situáciu vyriešiť v spolupráci s organizáciou alebo pri iných prípadoch, postúpime prípad príslušnému orgánu, ktorý ho rieši."
+        "title": "Obrátime sa na príslušný orgán",
+        "body": "Ak si situácia vyžaduje zásah príslušného orgánu, pripravíme potrebné podklady a postúpime mu prípad na ďalšie riešenie."
       },
       "followUp": {
         "title": "Sledujeme a vyhodnocujeme výsledky",
-        "body": "Prípad pre nás nekončí jeho odoslaním. Sledujeme, ako príslušné orgány postupovali, aký bol výsledok a získané poznatky využívame na zlepšovanie systému ochrany zvierat."
+        "body": "Prípad pre nás nekončí jeho odoslaním. Sledujeme, ako príslušné orgány postupujú, aký je výsledok a získané poznatky využívame na zlepšovanie systému ochrany zvierat."
       }
     },
     "note": {
       "title": "Keď je potrebné právne riešenie",
-      "body": "Prípad pre nás nekončí jeho odoslaním. Sledujeme, ako príslušné orgány postupovali, aký bol výsledok a získané poznatky využívame na zlepšovanie systému ochrany zvierat."
+      "body": "Do riešenia zložitejších prípadov sa zapája aj právny tím Zvieracieho ombudsmana. Posudzuje možnosti ďalšieho postupu a v závažných prípadoch týrania zvierat môže podať aj trestné oznámenie."
     }
   },
   "About": {
     "title": "O Zverolinke",
-    "body": "Zverolinka je mobilný sprievodca, ktorý vás krok za krokom prevedie pomocou zraneným, strateným a nájdeným či iným zvieratám. Spája ľudí, odborníkov a pomoc na jednom mieste.",
+    "body": "Zverolinka je mobilný sprievodca, ktorý vás krok za krokom prevedie pomocou zraneným, strateným a nájdeným či iným zvieratám. Spája ľudí, odborníkov a pomoc na jednom mieste. <b>Vznik Zverolinky podporila Nadácia ČSOB.</b>",
     "imageAlt": "Ľudia sediaci vedľa seba na bielej kocke"
   },
   "Support": {
     "title": "Staňte sa hrdinom pre zvieratá",
     "body": "Nie každý hrdina zachraňuje zvieratá vlastnými rukami. Podporte Zverolinku a staňte sa hrdinom pre zvieratá v núdzi.",
     "cta": "Prispejem na pomoc zvieratám"
+  },
+  "Partners": {
+    "label": "Partneri",
+    "csob": "Nadácia ČSOB",
+    "ombudsman": "Zvierací ombudsman"
+  },
+  "Privacy": {
+    "metaTitle": "Zásady ochrany osobných údajov | Zverolinka",
+    "title": "Zásady ochrany osobných údajov",
+    "intro": "Tieto zásady vysvetľujú spracúvanie osobných údajov pri používaní úvodnej webovej stránky zverolinka.sk, odbere newslettera, prejavení záujmu o dobrovoľníctvo a poskytovaní darov. Nevzťahujú sa na spracúvanie údajov pri nahlasovaní prípadov cez aplikáciu Zverolinka; to bude upravené osobitne.",
+    "controller": {
+      "title": "1. Kto spracúva vaše osobné údaje",
+      "body": "Prevádzkovateľom je <b>Aliancia združení na ochranu zvierat</b>, občianske združenie, IČO: 42268737, so sídlom Námestie SNP 463/3, 811 06 Bratislava-Staré Mesto (ďalej len „združenie“). Združenie vystupuje pod označením Zvierací ombudsman a realizuje projekt Zverolinka. V otázkach ochrany osobných údajov nás môžete kontaktovať na <b>{email}</b> alebo na adrese sídla."
+    },
+    "purposes": {
+      "title": "2. Na čo údaje používame a ako dlho ich uchovávame",
+      "lead": "Údaje spracúvame iba na určené účely a na príslušnom právnom základe podľa nariadenia (EÚ) 2016/679 (GDPR):",
+      "columns": {
+        "purpose": "Účel",
+        "data": "Aké údaje a na čo",
+        "basis": "Právny základ",
+        "retention": "Doba uchovávania"
+      },
+      "rows": {
+        "newsletter": {
+          "purpose": "Newsletter a informácie pre podporovateľov",
+          "data": "Meno a e-mail; informácia o záujme „podporovateľ“. Posielame novinky o Zverolinke a združení vrátane výziev na finančnú podporu.",
+          "basis": "Súhlas; čl. 6 ods. 1 písm. a) GDPR.",
+          "retention": "Do odvolania súhlasu alebo ukončenia odberu."
+        },
+        "volunteer": {
+          "purpose": "Záujem o dobrovoľníctvo",
+          "data": "Meno, priezvisko, e-mail, prípadne telefónne číslo a označenie záujmu. Kontaktujeme vás kvôli náboru; nejde ešte o prihlášku ani dobrovoľnícku zmluvu.",
+          "basis": "Samostatný súhlas; čl. 6 ods. 1 písm. a) GDPR.",
+          "retention": "Do odvolania súhlasu alebo skončenia príslušného náboru."
+        },
+        "calls": {
+          "purpose": "Telefonické oslovenie so žiadosťou o podporu",
+          "data": "Meno, telefónne číslo, prípadne stručný výsledok hovoru a dohodnutý ďalší kontakt. Hovory nenahrávame.",
+          "basis": "Samostatný súhlas; čl. 6 ods. 1 písm. a) GDPR.",
+          "retention": "Do odvolania súhlasu; poznámky iba počas ich potrebnosti."
+        },
+        "donations": {
+          "purpose": "Dary cez DARUJME.sk",
+          "data": "Kontaktné a identifikačné údaje darcu a údaje o dare a platbe sprístupnené platformou či bankou; prijatie a evidencia daru, účtovníctvo, ochrana nárokov.",
+          "basis": "Plnenie darovacej zmluvy, zákonná povinnosť a oprávnený záujem; čl. 6 ods. 1 písm. b), c) a f) GDPR.",
+          "retention": "Účtovné záznamy 10 rokov po roku, ktorého sa týkajú; ostatné údaje počas potrebnej doby a premlčacích lehôt."
+        },
+        "consents": {
+          "purpose": "Evidencia súhlasov a odmietnutí",
+          "data": "Záznam o súhlase alebo jeho odvolaní a minimálne údaje potrebné na to, aby sme vás po odmietnutí znovu nekontaktovali.",
+          "basis": "Zákonná povinnosť (ak sa uplatní § 116 zákona č. 452/2021 Z. z.) a oprávnený záujem; čl. 6 ods. 1 písm. c) a f) GDPR.",
+          "retention": "Po nevyhnutnú dobu; ak to vyžaduje § 116, dôkazy najmenej 4 roky od odvolania súhlasu alebo námietky."
+        },
+        "website": {
+          "purpose": "Prevádzka a zabezpečenie webu",
+          "data": "Technické záznamy vznikajúce pri návšteve webu, napr. IP adresa, dátum a čas požiadavky či údaje o prehliadači, v rozsahu potrebnom na prevádzku a ochranu webu.",
+          "basis": "Oprávnený záujem na zabezpečení a prevádzke webu; čl. 6 ods. 1 písm. f) GDPR.",
+          "retention": "Do odvolania súhlasu."
+        }
+      },
+      "voluntary": "Údaje na odber newslettera poskytujete dobrovoľne. Pri plánovanom formulári sú meno a e-mail povinné, priezvisko a telefónne číslo sú nepovinné. Bez povinných údajov prihlásenie nemožno dokončiť. Súhlasy s odberom, náborovým oslovením a fundraisingovými telefonátmi sú navzájom nezávislé.",
+      "sources": "Údaje získavame priamo od vás (formulár, e-mail či telefonát); pri darovaní tiež od DARUJME.sk alebo banky."
+    },
+    "access": {
+      "title": "3. Kto môže mať prístup k údajom",
+      "body": "Údaje spracúvajú poverení členovia nášho tímu a poskytovatelia nevyhnutných služieb. Na evidenciu kontaktov a zasielanie newsletterov používame Ecomail (ECOMAIL.CZ, s.r.o.). Na zabezpečenie technickej prevádzky a dostupnosti webovej stránky využívame cloudové služby spoločnosti Vercel Inc. Dary spracúvame prostredníctvom DARUJME.sk (Centrum pre filantropiu, n. o.), ktoré pri zabezpečovaní darovania môže vystupovať ako sprostredkovateľ aj ako samostatný prevádzkovateľ podľa konkrétneho účelu (www.darujme.sk/pravidla/). Prístup môžu mať tiež ďalší poskytovatelia technických a účtovných služieb; údaje poskytneme orgánom verejnej moci, ak to vyžaduje zákon. Osobné údaje nepredávame ani neposkytujeme iným subjektom na ich vlastný marketing."
+    },
+    "cookies": {
+      "title": "4. Cookies a technické fungovanie webu",
+      "body": "Na webovej stránke nepoužívame analytické cookies. Pri jej prevádzke môžu byť používané technicky nevyhnutné cookies alebo obdobné technológie, ktoré zabezpečujú jej fungovanie a bezpečnosť. Tieto technológie nepoužívame na analytické sledovanie návštevnosti."
+    },
+    "rights": {
+      "title": "5. Vaše práva a odvolanie súhlasu",
+      "withdraw": "Súhlas môžete kedykoľvek odvolať na {email}. Z newslettera sa môžete odhlásiť aj cez odkaz v každej správe. Súhlas s telefonátmi alebo s náborovým oslovením môžete odvolať samostatne bez toho, aby ste sa museli odhlásiť z newslettera. Volania môžete odmietnuť aj počas hovoru. Odvolanie nemá vplyv na zákonnosť spracúvania pred jeho odvolaním.",
+      "gdpr": "Za podmienok GDPR máte právo na prístup k údajom, ich opravu, výmaz, obmedzenie spracúvania a prenosnosť údajov. Proti spracúvaniu na základe oprávneného záujmu môžete namietať; proti priamemu marketingu môžete namietať kedykoľvek. Máte právo podať sťažnosť na Úrad na ochranu osobných údajov SR (www.dataprotection.gov.sk). Na žiadosti odpovedáme spravidla najneskôr do jedného mesiaca."
+    },
+    "security": {
+      "title": "6. Bezpečnosť údajov",
+      "body": "Prístup k údajom obmedzujeme na osoby, ktoré ich potrebujú pri svojej práci, a používame primerané technické a organizačné bezpečnostné opatrenia. V rámci účelov opísaných v týchto zásadách nevykonávame automatizované individuálne rozhodovanie s právnymi alebo obdobne významnými účinkami."
+    }
   },
   "Footer": {
     "about": "Zverolinka pomáha nájsť zraneným a ohrozeným zvieratám včasnú pomoc.",

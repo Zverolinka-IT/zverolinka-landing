@@ -5,14 +5,14 @@
   --surface: #ffffff;
   --foreground: #252a31;
   --muted: #5d5f73;
-  --border: #ecedf5;
   --brand: #454dce;
-  --brand-light: #5a61d6;
+  /* The light middle of the design's button gradients. */
+  --brand-light: #6168d5;
   --brand-soft: #dadbf5;
   --accent: #f56d42;
-  --accent-light: #f88862;
+  --accent-light: #f18e6f;
   --accent-soft: #fef5f2;
-  --accent-border: #f9b19a;
+  --placeholder: #a7afb6;
 }
 
 @theme inline {
@@ -20,15 +20,30 @@
   --color-surface: var(--surface);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
-  --color-border: var(--border);
   --color-brand: var(--brand);
   --color-brand-light: var(--brand-light);
   --color-brand-soft: var(--brand-soft);
   --color-accent: var(--accent);
   --color-accent-light: var(--accent-light);
   --color-accent-soft: var(--accent-soft);
-  --color-accent-border: var(--accent-border);
+  --color-placeholder: var(--placeholder);
   --font-sans: var(--font-inter);
+  --shadow-header: 0 2px 8px color-mix(in srgb, var(--foreground) 8%, transparent);
+  --shadow-button: 0 4px 0.5px color-mix(in srgb, var(--brand-soft) 50%, transparent);
+
+  /* Draws a stroke from start to end. The path needs pathLength="1". */
+  --animate-draw-check: draw-check 0.4s ease-out 0.1s both;
+
+  @keyframes draw-check {
+    from {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+    }
+    to {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 0;
+    }
+  }
 }
 
 body {
@@ -47,22 +62,22 @@ body {
 
 html {
   scroll-behavior: smooth;
-  /* Stops anchored sections below the sticky header (h-20 plus its 1px
-     border), in the middle of main's gap-4 between sections. */
-  scroll-padding-top: calc(5rem + 1px + 0.5rem);
+  /* Stops anchored sections below the sticky header (h-20), in the middle
+     of main's gap-4 between sections. */
+  scroll-padding-top: calc(5rem + 0.5rem);
 }
 
 @media (width >= 48rem) {
   html {
     /* main's gap grows to md:gap-10. */
-    scroll-padding-top: calc(5rem + 1px + 1.25rem);
+    scroll-padding-top: calc(5rem + 1.25rem);
   }
 }
 
 @media (width >= 64rem) {
   html {
     /* The header grows to lg:h-25. */
-    scroll-padding-top: calc(6.25rem + 1px + 1.25rem);
+    scroll-padding-top: calc(6.25rem + 1.25rem);
   }
 }
 

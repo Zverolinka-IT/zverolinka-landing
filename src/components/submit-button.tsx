@@ -15,9 +15,9 @@ type SubmitButtonProps = {
   className?: string;
 };
 
-// While sending, the button is only disabled. After a successful send it turns
-// white with a border and shows a tick and "sent" for three seconds. It stays
-// disabled then, so the form is not sent twice.
+// While sending, the button is disabled and dimmed. After a successful send it
+// stays purple, draws a tick next to "sent", and stays disabled for three
+// seconds without dimming, so the form is not sent twice.
 export function SubmitButton({ state, pending, label, className = "" }: SubmitButtonProps) {
   const t = useTranslations("Form");
   const [shownState, setShownState] = useState<typeof state | null>(null);
@@ -37,14 +37,10 @@ export function SubmitButton({ state, pending, label, className = "" }: SubmitBu
         type="submit"
         disabled={pending || sent}
         className={`
-          h-13 rounded-xl border px-8 font-medium transition-opacity
+          h-13 rounded-2xl bg-linear-to-r from-brand via-brand-light via-35% to-brand px-8 font-semibold text-white
+          shadow-button transition-opacity
           enabled:hover:opacity-90
           ${pending ? "opacity-60" : ""}
-          ${
-            sent
-              ? "border-brand bg-surface text-brand"
-              : "border-transparent bg-linear-to-r from-brand-light to-brand text-white shadow-md shadow-brand/25"
-          }
           ${className}
         `}
       >
@@ -52,11 +48,12 @@ export function SubmitButton({ state, pending, label, className = "" }: SubmitBu
             button is always as wide as the wider face and never jumps. */}
         <span className="grid justify-items-center *:col-start-1 *:row-start-1">
           <span className={sent ? "invisible" : undefined}>{label}</span>
-          {/* The tick has empty space on its left, pulled in so the tick and
-              the word are centered together. */}
+          {/* Only the tick shows. The word stays for screen readers, so the
+              button keeps a name. The draw class is added only while sent,
+              so the tick draws again after every send. */}
           <span className={`flex items-center ${sent ? "" : "invisible"}`} aria-hidden={!sent}>
-            <CheckIcon className="-my-2 -ml-2 size-7 shrink-0" />
-            {t("sent")}
+            <CheckIcon className={`-my-2 size-10 shrink-0 ${sent ? "motion-safe:[&_path]:animate-draw-check" : ""}`} />
+            <span className="sr-only">{t("sent")}</span>
           </span>
         </span>
       </button>

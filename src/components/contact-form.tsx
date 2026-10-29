@@ -49,8 +49,8 @@ function Field({ name, type, autoComplete, required, defaultValue, invalid }: Fi
         aria-invalid={invalid || undefined}
         aria-describedby={invalid ? `${id}-error` : undefined}
         className="
-          mt-2 h-11 w-full rounded-xl border border-brand bg-surface px-4 text-base
-          placeholder:text-muted/70
+          mt-2 h-11 w-full rounded-2xl border border-brand bg-surface px-4 text-base
+          placeholder:text-placeholder
           focus:outline-2 focus:outline-offset-1 focus:outline-brand
           aria-invalid:border-accent
           md:text-sm
@@ -116,9 +116,9 @@ export function ContactForm({ consent }: { consent: ReactNode }) {
       noValidate
       className="flex w-full flex-1 flex-col md:max-w-191 md:flex-none"
     >
-      {/* One column on phones. From md, two columns filled top to bottom, so
-          the names sit on the left and email and phone on the right. */}
-      <div className="grid gap-3 md:grid-flow-col md:grid-cols-2 md:grid-rows-2 md:gap-x-6">
+      {/* One column on phones. From md, two columns filled row by row, so the
+          names share the first row and email and phone the second. */}
+      <div className="grid gap-4 md:grid-cols-2 md:gap-x-6">
         <Field
           name="firstName"
           type="text"
@@ -131,7 +131,6 @@ export function ContactForm({ consent }: { consent: ReactNode }) {
           name="lastName"
           type="text"
           autoComplete="family-name"
-          required
           defaultValue={values?.lastName}
           invalid={invalid("lastName")}
         />
@@ -146,14 +145,15 @@ export function ContactForm({ consent }: { consent: ReactNode }) {
         <Field name="phone" type="tel" autoComplete="tel" defaultValue={values?.phone} invalid={invalid("phone")} />
       </div>
 
-      {/* A trap for spam bots, the same as in the signup form. */}
+      {/* A trap for spam bots. It is off screen and skipped by keyboard and
+          screen readers, so only bots fill it in. */}
       <input
         type="text"
         name="website"
         tabIndex={-1}
         autoComplete="off"
         aria-hidden="true"
-        className="absolute -left-[9999px] size-px opacity-0"
+        className="absolute left-[-9999px] size-px opacity-0"
       />
 
       <div className="mt-6 flex flex-col gap-3 md:mt-8">

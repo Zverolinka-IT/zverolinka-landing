@@ -1,6 +1,7 @@
 import { About } from "@/components/about";
 import { Features } from "@/components/features";
 import { Hero } from "@/components/hero";
+import { Partners } from "@/components/partners";
 import { Report } from "@/components/report";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -16,6 +17,7 @@ export default function Home() {
         <Report />
         <About />
         <Support />
+        <Partners />
       </main>
       <SiteFooter />
     </>

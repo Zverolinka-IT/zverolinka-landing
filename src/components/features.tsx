@@ -10,7 +10,12 @@ export function Features() {
 
   return (
     <section id="ako-to-funguje" className="mx-auto w-full max-w-360 px-4 sm:px-10">
-      <div className="grid overflow-hidden rounded-2xl bg-surface md:grid-cols-[minmax(0,474fr)_minmax(0,886fr)]">
+      <div
+        className="
+          grid overflow-hidden rounded-2xl border border-brand-soft bg-surface
+          md:grid-cols-[minmax(0,474fr)_minmax(0,886fr)]
+        "
+      >
         {/* Under the text on mobile, in the left column from md. */}
         <Image
           src={appInHand}
@@ -20,12 +25,12 @@ export function Features() {
         />
 
         <div className="px-5 py-6 md:py-10 md:pr-5 md:pl-11">
-          <h2 className="text-xl font-semibold sm:text-[28px] sm:leading-9 md:text-balance">{t("title")}</h2>
+          <h2 className="text-xl font-bold sm:text-[28px] sm:leading-9 md:text-balance">{t("title")}</h2>
 
-          <ul className="mt-6 space-y-4 md:space-y-3 sm:space-y-4 md:mt-8">
+          <ul className="mt-6 space-y-4 md:mt-8 md:space-y-3">
             {items.map((item) => (
               <li key={item} className="flex items-start gap-3 sm:gap-5">
-                <CheckCircleIcon className="size-5 shrink-0 text-accent sm:size-6 mt-1" />
+                <CheckCircleIcon className="mt-1 size-5 shrink-0 text-accent sm:size-6" />
                 <div className="text-sm leading-5 sm:text-base sm:leading-normal">
                   <h3 className="text-base font-semibold sm:text-lg">{t(`items.${item}.title`)}</h3>
                   <p className="text-pretty sm:mt-0.5">{t(`items.${item}.body`)}</p>
