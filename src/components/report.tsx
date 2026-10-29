@@ -36,7 +36,7 @@ export function Report() {
           ))}
         </ol>
 
-        <div className="mt-5 rounded-2xl bg-accent-soft p-4 md:mt-8">
+        <div className="mt-5 rounded-2xl bg-accent-soft p-4 md:mt-7">
           <div className="flex items-center gap-3">
             <InfoIcon className="size-6 shrink-0 text-accent md:size-8" />
             <h3 className="text-sm leading-5 font-semibold text-accent md:text-lg md:leading-7">{t("note.title")}</h3>
